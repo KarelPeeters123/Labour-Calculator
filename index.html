@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labour Cost Calculator</title>
+
+    <style>
+        /* Mobile-first styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f6f6f6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .label {
+            margin-bottom: 8px;
+            display: block;
+            font-weight: bold;
+        }
+
+        /* Dollar input wrapper */
+        .dollar-input {
+            position: relative;
+        }
+
+        .dollar-input input {
+            width: 100%;
+            padding: 12px 12px 12px 32px; /* space for $ */
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .dollar-input span {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            font-size: 1.1rem;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            background: #005fcc;
+        }
+
+        /* Result box */
+        .result-box {
+            width: 100%;
+            min-height: 120px;
+            margin-top: 20px;
+            padding: 12px;
+            font-size: 1.1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background: #fafafa;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        /* Desktop enhancements */
+        @media (min-width: 768px) {
+            body { margin: 40px; }
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Labour Cost Calculator</h2>
+
+        <div class="input-group">
+            <label class="label" for="inputValue">How much does the item cost?</label>
+
+            <div class="dollar-input">
+                <span>$</span>
+                <input type="number" id="inputValue" placeholder="0.00" />
+            </div>
+        </div>
+
+        <button onclick="calculateLabourCost()">Calculate</button>
+        <p>In order to pay for the item, you will need to work for:</p>
+        <textarea id="outputValue" class="result-box" readonly></textarea>
+    </div>
+
+    <script src="labourCost.js">
+        /* Insert your JS function here */
+    </script>
+</body>
+</html>
